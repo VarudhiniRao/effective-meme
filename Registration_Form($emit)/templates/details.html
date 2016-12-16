@@ -1,0 +1,14 @@
+<div class="container" style="background-color: white;">
+    <div class="col-md-offset-5">
+        <button type="submit " ng-click="fnSubmit() " class="btn btn-primary ">VIEW</button>
+    </div>
+    
+
+        <div class="col-md-offset-3" style="font-family: cursive;font-weight: bold">
+<!--         <pre>{{mainArray | json}}</pre> -->
+    <div ng-repeat="data in mainArray">
+        <div ng-repeat="(key , value) in data">
+            <h3>{{key}} : {{value}}</h3>
+        </div>
+    </div>
+</div>

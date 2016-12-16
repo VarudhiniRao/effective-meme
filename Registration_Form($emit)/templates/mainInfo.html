@@ -1,0 +1,33 @@
+<div class="container" >
+    <form class="form-inline">
+        <div class="form-group col-md-offset-4">
+            <label>Name</label>
+            <input type="text" class="form-control" ng-model="obj.name" placeholder="Jane Doe">
+        </div>
+        <br>
+        <BR>
+        <div class="form-group col-md-offset-4">
+            <label>Email</label>
+            <input type="email" class="form-control" ng-model="obj.emailId" placeholder="jane.doe@example.com">
+        </div>
+        <br>
+        <br>
+        <div class="form-group col-md-offset-4">
+            <label>Contact</label>
+            <input type="text" class="form-control" ng-model="obj.mobileNumber" placeholder="+91 950274 3982">
+        </div>
+        <br>
+        <br>
+        <div class="form-group col-md-offset-4">
+            <label>Location</label>
+            <input type="text" class="form-control" ng-model="obj.location" placeholder="New Delhi">
+        </div>
+        <br>
+        <br>
+    </form>
+    <div class="col-md-offset-4">
+
+            <a ng-click="navigateTo('personalDetails')">
+                <button type="submit" class="btn btn-primary">NEXT</button></a>
+    </div>
+</div>
