@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/wordPuzzle.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="wordApp" ng-controller="wordPuzzleCtrl">
+    <div class="hangman">
+        <div class="guess"></div>
+        <form class="guessForm">
+            <input style="width: 200px;height:40px;" type="text" ng-model="guessLetter" maxlength="1" placeholder="Enter a letter . . . &#x23ce;" />
+            <button style="width: 100px;height:40px;" type="submit" ng-click="guessButton(guessLetter)">Guess</button>
+           
+        </form>
+        <p>Hint: words are web related.
+            <br/><a href="http://codepen.io/natewiley">Follow Me on Codepen</a></p>
+        <div class="wrong">
+            <div class="wrongLetters"></div>
+        </div>
+        <div class="message">
+            <h1 class="title"></h1>
+            <p class="text"></p>
+            <button class="restart button">Play Again?</button>
+        </div>
+    </div>
+    <div>
+        <ul class="word">
+            <li class="letter" style="color:white; " ng-repeat="expression in z">
+                {{expression.value}}</li>
+        </ul>
+    </div>
+    <hr>
+    <h2 style="color:white;font-family: cursive; text-align: center;" >WRONG WORDS</h2>
+    <div class="wrong">
+        <ul  >
+            <li class="wrongLetters" style="color:white; list-style-type: none; font-family: cursive;font-size:50px;" ng-repeat="expression in wrongWord">
+                {{expression}}</li>
+        </ul>
+    </div>
+    <button class="col-md-offset-5" type="submit" style="width: 100px;height:40px;margin-top: 200px" ng-click="getRandomWord()">SKIP</button>
+</body>
+
+</html>
