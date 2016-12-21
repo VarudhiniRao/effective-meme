@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <script type="text/javascript" src="js/number.js"></script>
+</head>
+
+<body ng-app="numberApp" ng-controller="numberCtrl">
+    <div class="col-md-offset-4">
+        <input type="number" maxlength="2" placeholder="ENTER YOUR VALUE" ng-change="inputValue2()" ng-model="inputValue">
+        <h1 ng-repeat="x in output track by $index">{{x+""+":-),:-*"}}</h1>
+</body>
+
+</html>

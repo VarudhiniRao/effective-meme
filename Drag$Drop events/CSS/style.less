@@ -1,0 +1,41 @@
+@images: "../Images";
+
+body {
+  background: url("@{images}/background.jpg") no-repeat;
+  width:100%;
+  background-size:cover;
+}
+
+.boxClass{
+	border:1px solid red;
+	width:150px;
+	height:140px;
+	margin-top:10px;
+	
+	margin-right:2px;
+	text-align:center;
+}
+
+.boxClass1{
+	.boxClass;
+	height:350px;
+	width:600px;
+	margin-right:5px;
+}
+
+.boxClassMed{
+	border:1px solid black;
+	width:100px;
+	height:135px;
+	margin-top:10px;
+	margin-left:55px;
+	margin-right:1px;
+	text-align:center;
+	
+}
+boxClassMed1{
+.boxClassMed;
+height:450px;
+width:700px;
+margin-right:5px;
+}

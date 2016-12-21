@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <script type="text/javascript" src="js/dragDrop.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+</head>
+
+<body ng-app="dragApp" ng-controller="dragCtrl">
+    <div class="col-md-4 col-sm-4">
+        <div draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+            <p>hello hi
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="boxClass1" data-drop="true" jqyoui-droppable>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="boxClass"></div>
+                    <div class="boxClass"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="boxClass"></div>
+                    <div class="boxClass"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
