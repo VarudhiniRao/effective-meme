@@ -1,0 +1,64 @@
+
+  [
+    {
+            "name": "Forecast",
+            "interval": 1,
+            "dataPoints": [{
+                "label": "Field 1",
+                "y": 1700
+            }, {
+                "label": "Field 2",
+                "y": 2600
+            }, {
+                "label": "Field 3",
+                "y": 3200
+            }, {
+                "label": "Field 4",
+                "y": 5000
+            }, {
+                "label": "Field 5",
+                "y": 1000
+            }, {
+                "label": "Field 6",
+                "y": 2800
+            }, {
+                "label": "Field 7",
+                "y": 800
+            }, {
+                "label": "Field 8",
+                "y": 2600
+            }]
+        },
+
+        {
+            "name": "Actual",
+            "interval": 1,
+            "dataPoints": [{
+                "label": "Field 1",
+                "y": 2000
+            }, {
+                "label": "Field 2",
+                "y": 3400
+            }, {
+                "label": "Field 3",
+                "y": 4800
+            }, {
+                "label": "Field 4",
+                "y": 4800
+            }, {
+                "label": "Field 5",
+                "y": 1800
+            }, {
+                "label": "Field 6",
+                "y": 3700
+            }, {
+                "label": "Field 7",
+                "y": 1000
+            }, {
+                "label": "Field 8",
+                "y": 2000
+            }]
+        }
+
+    ]
+

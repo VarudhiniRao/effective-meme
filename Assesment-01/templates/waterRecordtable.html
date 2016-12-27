@@ -1,0 +1,135 @@
+<div class="col-md-12 col-xs-12">
+    <div class="col-md-6" style="margin-top:50px;">
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="height:50px;">
+                        <th colspan="2">Water Records</th>
+                        <th id="td3" colspan="2"><span style=";padding: 3%;">1month </span></th>
+                        <th colspan="2"><span style=";padding: 3%;">3 months </span></th>
+                        <th colspan="2"><span style="padding: 6%;">1year </span></th>
+                        <th colspan="2"><span style="padding: 6%;">3 years</span></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Ranch</th>
+                        <th>Water Source</th>
+                        <th>Location</th>
+                        <th>Sample Date</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td colspan="6" style="height: 20px; text-align: left;font-weight: bold">Organic 13</td>
+                    <tr ng-repeat="data in myData.WaterRecords">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.waterSorce}}</td>
+                        <td>{{data.location}}</td>
+                        <td>{{data.SampleDate}}</td>
+                        <td><img ng-src="{{data.result}}"></td>
+
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td colspan="6" style="height: 20px; text-align: left;font-weight: bold">Organic 14</td>
+                    <tr ng-repeat="data in myData.WaterRecords">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.waterSorce}}</td>
+                        <td>{{data.location}}</td>
+                        <td>{{data.SampleDate}}</td>
+                        <td><img ng-src="{{data.result}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6" style="margin-top:50px;">
+        <div class="table-responsive">
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr style="height:50px;">
+                            <th colspan="2">Forecast/Records</th>
+                            <th id="td3" colspan="2"><span style=";padding: 3%;">1month </span></th>
+                            <th colspan="2"><span style=";padding: 3%;">3months </span></th>
+                            <th colspan="2"><span style="padding: 6%;">1year </span></th>
+                            <th colspan="2"><span style="padding: 6%;">3years</span></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <table class="table table-bordered" style="width:160px;>
+                <thead ">
+                <th>Ranch</th>
+                <th>Commodity</th>
+                <th>Harvest Date</th>
+                <th>Target Yield</th>
+                <th>Actual Yield</th>
+                <th>  </th>
+                </tr>
+                </thead>
+                <tbody>
+                    <td colspan="6" style="height: 20px; text-align: left;font-weight: bold">Organic 13</td>
+                    <tr ng-repeat="data in myData.Report">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.Commodity}}</td>
+                        <td>{{data.date}}</td>
+                        <td>{{data.TargetYield}}</td>
+                        <td>{{data.ActualYield}}</td>
+                         <td><img ng-src="{{data.result}}"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td colspan="6" style="height: 20px; text-align: left;font-weight: bold">Organic 15</td>
+                    <tr ng-repeat="data in myData.Report" ng-if="$index <2">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.Commodity}}</td>
+                        <td>{{data.date}}</td>
+                        <td>{{data.TargetYield}}</td>
+                        <td>{{data.ActualYield}}</td>
+                         <td><img ng-src="{{data.result}}"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td colspan="6" style="height: 20px; text-align: left;font-weight: bold">Organic 16</td>
+                    <tr ng-repeat="data in myData.Report" ng-if="$index <2">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.Commodity}}</td>
+                        <td>{{data.date}}</td>
+                        <td>{{data.TargetYield}}</td>
+                        <td>{{data.ActualYield}}</td>
+                         <td><img ng-src="{{data.result}}"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td colspan="6" style="height: 20px; text-align: left;font-weight: bold">Organic 17</td>
+                    <tr ng-repeat="data in myData.Report" ng-if="$index <3">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.Commodity}}</td>
+                        <td>{{data.date}}</td>
+                        <td>{{data.TargetYield}}</td>
+                        <td>{{data.ActualYield}}</td>
+                         <td><img ng-src="{{data.result}}"></td>
+                    </tr>
+                    <tr ng-repeat="data in myData.Report " ng-if="$index <1">
+                        <td style="color: #40c4ff">{{data.Ranch}}</td>
+                        <td>{{data.Commodity}}</td>
+                        <td>{{data.date}}</td>
+                        <td>{{data.TargetYield}}</td>
+                        <td>{{data.ActualYield}}</td>
+                         <td><img ng-src="{{data.result}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </tbody>
+    </table>
+</div>
+</div>
+</div>

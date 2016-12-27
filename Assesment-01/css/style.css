@@ -1,0 +1,230 @@
+.image {
+    margin-left: 30px;
+    margin-top: 12px;
+}
+
+.searchBar {
+    position: relative;
+    margin-top: 15px;
+    background-color: white;
+    margin-left: 300px;
+    width: 246px;
+    height: 27px;
+}
+
+#imaginary_container {
+    margin-top: 20%;
+    width: 246px;
+    height: 27px;
+    /* Don't copy this */
+}
+
+.stylish-input-group .input-group-addon {
+    background: white !important;
+}
+
+.stylish-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc;
+}
+
+.stylish-input-group button {
+    border: 0;
+    background: transparent;
+}
+
+.picture {
+    background-color: (216, 216, 216);
+    border-radius: 45px;
+    width: 80px;
+    height: 60px;
+}
+
+.img-circle {
+    border-radius: 80%;
+    height: 40px;
+    width: 35px;
+    color: yellow;
+    margin-top: -40px;
+    position: relative !important;
+}
+
+.user {
+    background-color: #b1adad;
+    height: 40px;
+    width: 50px;
+    border-radius: 60%;
+    font-size: 25px;
+    padding-left: 12px;
+    padding-top: 10px;
+    margin-left: 260px;
+}
+
+.users {
+    border-radius: 50%;
+    border: 1x solid #ccc;
+    padding: 13px 16px 16px 19px;
+    background-color: #ccc;
+    margin-left: 560px;
+    margin-top: -32px;
+    font-size: 45px;
+}
+
+#users2 {
+    font-size: 30px;
+}
+
+#dots {
+    margin-left: 630px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -45px;
+}
+
+#tab {
+    width: 80px;
+    height: 63px;
+    background-color: #7cb342;
+    margin-top: 20px;
+    font-weight: semi-bold;
+    font-size: 30px;
+    color: white;
+    padding: 15px 15px 12px 14px
+}
+
+#nav {
+    width: 960px;
+    height: 63px;
+    background-color: #e0e0e0!important;
+    margin-top: 20px;
+    margin-left: -190px;
+}
+
+h4 {
+    font-size: 20px;
+    padding-top: 22px;
+    padding-left: 22px;
+}
+
+#li1 {
+    font-size: 25px;
+    margin-left: 550px;
+    margin-top: -35px;
+    padding-left: -90px;
+    padding-left: -60px;
+    margin-left: 820px;
+    padding-bottom: 40px;
+}
+
+#li2 {
+    font-size: 25px;
+    margin-left: 550px;
+    margin-top: -20px;
+    padding-left: -50px;
+    margin-left: 320px;
+    padding-left: 560px;
+    margin-top: -65px;
+    color: #039be5;
+}
+
+#navbar {
+    margin-top: 10px;
+    width: 220px;
+    font-size: 20px;
+    height: 54px;
+    color: grey;
+    text-align: left;
+}
+
+#searchrecord {
+    margin-top: -20px;
+    margin-left: 100px;
+}
+
+#all-record {
+    margin-top: 11px;
+    height: 54px;
+    font-size: 20px;
+    color: grey;
+}
+
+#icon {
+    font-size: 20px;
+    padding-left: 160px;
+    align-items: right;
+    color: grey;
+}
+
+#record-type {
+    margin-top: 11px;
+    height: 54px;
+    font-size: 20px;
+    color: grey;
+    text-align: left;
+}
+
+#icon2 {
+    font-size: 20px;
+    padding-left: 60px;
+    align-items: right;
+    color: grey;
+}
+
+#go {
+    width: 73px;
+    height: 51px;
+    background-color: #7cb342;
+    margin-top: 11px;
+}
+
+#graphNav {
+    background-color: white!important;
+    height: 40px;
+    margin-top: 57px;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.tdClass {
+    width: 130px;
+    border: 1px grey solid;
+    color: grey;
+    text-align: center;
+}
+
+#td2 {
+    width: 120px;
+}
+
+#td3 {
+    border-bottom: 4px solid #7cb342;
+}
+
+#navCopy {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 180px;
+    font-size: 20px;
+    height: 54px;
+    color: grey;
+}
+
+#result-Table {
+
+    height: 400px;
+    border: 2px solid grey;
+    margin-top: 50px;
+}
+@font-face {
+    font-family: FiraSans-Light;
+    src: url("../fonts/FiraSans-Light.ttf") format('truetype');
+    color:black;
+}
+*{
+    font-family: FiraSans-Light;
+}

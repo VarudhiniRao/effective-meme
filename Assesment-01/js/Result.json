@@ -1,0 +1,71 @@
+{
+  
+  
+    "Report":
+      [{
+        "Ranch":"Field1",
+        "Commodity":"Bluberries",
+        "date":"12/12/16",
+        "TargetYield":"1400",
+        "ActualYield":"1400",
+         "result":"./image/tick.png"
+
+       
+      },
+      {
+        "Ranch":"Field2",
+        "Commodity":"Bluberries",
+        "date":"12/12/16",
+        "TargetYield":"1250",
+        "ActualYield":"1250",
+         "result":"../image/tick.png"
+       
+      },
+      {
+        "Ranch":"Field3",
+        "Commodity":"Bluberries",
+        "date":"12/12/16",
+        "TargetYield":"1250",
+        "ActualYield":"1250",
+         "result":"../image/tick.png"
+       
+      },
+      {
+        "Ranch":"Field4",
+        "Commodity":"Strawberries",
+        "date":"11/12/16",
+        "TargetYield":"1350",
+        "ActualYield":"1350",
+         "result":"./image/tick.png"
+       
+      }
+      ],
+
+      "WaterRecords":[
+        {
+          "Ranch":"Field1",
+          "waterSorce":"Splinker",
+          "location":"Location123",
+          "SampleDate":"12/12/16",
+           "result":"../image/tick.png"
+        },
+        {
+          "Ranch":"Field2",
+          "waterSorce":"Well",
+          "location":"Location1",
+          "SampleDate":"12/12/16",
+           "result":"../image/cross.png"
+        },
+        {
+          "Ranch":"Field3",
+          "waterSorce":"Well",
+          "location":"Location2",
+          "SampleDate":"12/12/16",
+           "result":"image/cross.png"
+        }
+        ]
+    
+    
+    
+    
+} 

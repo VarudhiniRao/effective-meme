@@ -1,0 +1,62 @@
+[{
+            "name": "Harvest1",
+             "interval": 1,
+            "dataPoints": [{
+                "label": "Strawberries",
+                "y": 60
+            }, {
+                "label": "Blueberries",
+                "y": 54
+            }, {
+                "label": "Lettuce",
+                "y": 67
+            }, {
+                "label": "Broccoli",
+                "y": 80
+            }, {
+                "label": "Cauiliflower",
+                "y": 80
+            }]
+        },
+
+        {
+            "name": "Harvest2",
+             "interval": 1,
+            "dataPoints": [{
+                "label": "Strawberries",
+                "y": 0
+            }, {
+                "label": "Blueberries",
+                "y": 18
+            }, {
+                "label": "Lettuce",
+                "y": 17
+            }, {
+                "label": "Broccoli",
+                "y": 0
+            }, {
+                "label": "Cauiliflower",
+                "y": 0
+            }]
+        },
+        {
+            "name": "Harvest3",
+             "interval":1,
+            "dataPoints": [{
+                "label": "Strawberries",
+                "y": 0
+            }, {
+                "label": "Blueberries",
+                "y": 18
+            }, {
+                "label": "Lettuce",
+                "y": 8
+            }, {
+                "label": "Broccoli",
+                "y": 0
+            }, {
+                "label": "Cauiliflower",
+                "y": 0
+            }]
+        }
+    ]
