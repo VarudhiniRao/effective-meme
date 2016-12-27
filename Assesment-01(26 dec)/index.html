@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/dashboard.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+<script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+<script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"></script>
+<script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.js"></script>
+ -->
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+</head>
+
+<body ng-app="farmerDashboard">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12"  style="padding-top:20px">
+            <img class="pull-left" src="image/pic.png" style="width:103px;height:75px;">
+            <div class="col-md-8 pull-right" style="padding-top:20px">
+                <i class="fa fa-ellipsis-v fa-lg pull-right icon" air-hidden="true" style="padding-top:10px"></i>
+                <i class="fa fa-user pull-right icon" aria-hidden="true" style="background-color:grey; border-radius:50%"></i>
+                <div class="pull-right col-md-5">
+                    <div class="col-xs-12">
+                        <div class="input-group stylish-input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-addon">
+                            <button type="submit">
+                              <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12 col-lg-12"  style="margin-top:20px; background:#cecece">
+          <i id="tab" class="fa fa-align-justify pull-left" title="Align Justify"></i>
+          <h4 class="pull-left" style="padding-top:10px; font-weight:bold">Farmer Dashboard</h4>
+          <div class="col-md-8 pull-right" style="padding-top:10px">
+              <i class="glyphicon glyphicon-th-large pull-right icon" air-hidden="true"></i>
+              <i class="glyphicon glyphicon-map-marker pull-right icon" aria-hidden="true" style="background-color:grey; border-radius:50%"></i>
+          </div>
+      </div>
+        <!-- <div class="col-sm-4 col-md-3">
+            <i id="tab" class="fa fa-align-justify" title="Align Justify"></i>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div id="nav">
+                <h4>Farmer Dashboard</h4>
+                <ul class="nav navbar-nav navbar-right ">
+                    <li id="li1"><span class="glyphicon glyphicon-map-marker"></span></li>
+                    <li><span id="li2" class="glyphicon glyphicon-th-large"></span></li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <div ng-controller="navctrl">
+        <navbar-directive></navbar-directive>
+        <div>
+            <graph-nav-directive></graph-nav-directive>
+        </div>
+    </div>
+    <div class="col-md-12 col-xs-12" style="margin-top:35px">
+        <div class="col-md-6 ">
+            <div ng-controller="graphDataCtrl">
+                <div id="chartContainer" style="height: 300px; width: 100%;">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div ng-controller="forecastDataCtrl">
+                <div id="chartContainer2" style="height: 300px; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-controller="waterRecordCtrl">
+        <div>
+            <water-record-directive></water-record-directive>
+        </div>
+    </div>
+</body>
+
+</html>
