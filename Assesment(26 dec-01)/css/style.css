@@ -255,3 +255,6 @@ hr{
 #tableborder{
         border: 1px solid grey!important;
 }
+#tableRytBorder{
+    border-right: 2px solid grey!important;
+}

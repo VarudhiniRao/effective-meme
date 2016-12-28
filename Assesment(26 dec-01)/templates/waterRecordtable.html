@@ -13,7 +13,7 @@
                 </thead>
             </table>
         </div>
-        <div class="table-responsive">
+        <div >
             <table class="table table-borderless" id="tableborder">
                 <thead>
                     <tr>
@@ -21,7 +21,7 @@
                         <th id="tableHead">Water Source</th>
                         <th id="tableHead">Location</th>
                         <th id="tableHead">Sample Date</th>
-                        <th id="tableHead">Result</th>
+                        <th id="tableHead tableRytBorder">Result</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +33,7 @@
                         <td>{{data.waterSorce}}</td>
                         <td>{{data.location}}</td>
                         <td>{{data.SampleDate}}</td>
-                        <td><img ng-src="{{data.result}}"></td>
+                        <td id="tableRytBorder"><img ng-src="{{data.result}}"></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -45,7 +45,7 @@
                         <td>{{data.waterSorce}}</td>
                         <td>{{data.location}}</td>
                         <td>{{data.SampleDate}}</td>
-                        <td><img ng-src="{{data.result}}"></td>
+                        <td id="tableRytBorder"><img ng-src="{{data.result}}"></td>
                     </tr>
                 </tbody>
             </table>
