@@ -246,6 +246,9 @@ hr{
 }
 #tableHead{
         font-size: 12px!important;
+}#tableHead2{
+        font-size: 20px!important;
+        font-weight: bold;
 }
 #heading{
     height: 20px;
