@@ -241,7 +241,7 @@ h5 {
     border: none;
 }
 hr{
-   border: 1px solid grey;
+   border: -1px solid grey;
     color: grey;
 }
 #tableHead{
