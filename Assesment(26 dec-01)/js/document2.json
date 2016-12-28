@@ -2,6 +2,7 @@
   [
     {
             "name": "Forecast",
+             "color":"#90AE64",
             "interval": 1,
             "dataPoints": [{
                 "label": "Field 1",
@@ -33,6 +34,7 @@
         {
             "name": "Actual",
             "interval": 1,
+              "color": "#E9A94B",
             "dataPoints": [{
                 "label": "Field 1",
                 "y": 2000
