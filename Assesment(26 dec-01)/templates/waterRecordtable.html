@@ -4,11 +4,11 @@
             <table class="table table-bordered">
                 <thead>
                     <tr style="height:50px;">
-                        <th id="tableHead2" colspan="2">Water Records</th>
-                        <th id="td3 " colspan="2"><span style=";padding: 3%;">1month </span></th>
-                        <th id="tableHead"colspan="2"><span style=";padding: 3%;">3 months </span></th>
-                        <th id="tableHead" colspan="2"><span style="padding: 6%;">1year </span></th>
-                        <th id="tableHead"colspan="2"><span style="padding: 6%;">3 years</span></th>
+                        <th class="tableHead2" colspan="2">Water Records</th>
+                        <th class="td3 " colspan="2"><span style=";padding: 3%;">1month </span></th>
+                        <th class="tableHead"colspan="2"><span style=";padding: 3%;">3 months </span></th>
+                        <th class="tableHead" colspan="2"><span style="padding: 6%;">1year </span></th>
+                        <th class="tableHead"colspan="2"><span style="padding: 6%;">3 years</span></th>
                     </tr>
                 </thead>
             </table>
@@ -17,15 +17,15 @@
             <table class="table table-borderless" id="tableborder">
                 <thead>
                     <tr>
-                        <th id="tableHead">Ranch</th>
-                        <th id="tableHead">Water Source</th>
-                        <th id="tableHead">Location</th>
-                        <th id="tableHead">Sample Date</th>
-                        <th id="tableHead tableRytBorder">Result</th>
+                        <th class="tableHead">Ranch</th>
+                        <th class="tableHead">Water Source</th>
+                        <th class="tableHead">Location</th>
+                        <th class="tableHead">Sample Date</th>
+                        <th class="tableHead " id="tableRytBorder">Result</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <td colspan="6" id="heading" >Organic 13
+                    <td colspan="6" class="heading" >Organic 13
                         <hr>
                     </td>
                     <tr style="border-right: 1px solid black;" ng-repeat="data in myData.WaterRecords">
@@ -37,7 +37,7 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <td colspan="6" id="heading">Organic 14
+                    <td colspan="6" v="heading">Organic 14
                         <hr>
                     </td>
                     <tr ng-repeat="data in myData.WaterRecords">
@@ -57,11 +57,11 @@
                 <table class="table table-bordered" >
                     <thead>
                         <tr style="height:50px;">
-                            <th id="tableHead2" colspan="2">Forecast/Records</th>
-                            <th id=" td3 " colspan="2"><span style=";padding: 3%;">1month </span></th>
-                            <th id="tableHead" colspan="2"><span style=";padding: 3%;">3months </span></th>
-                            <th id="tableHead" colspan="2"><span style="padding: 6%;">1year </span></th>
-                            <th id="tableHead" colspan="2"><span style="padding: 6%;">3years</span></th>
+                            <th class="tableHead2" colspan="2">Forecast/Records</th>
+                            <th class=" td3 " colspan="2"><span style=";padding: 3%;">1month </span></th>
+                            <th class="tableHead" colspan="2"><span style=";padding: 3%;">3months </span></th>
+                            <th class="tableHead" colspan="2"><span style="padding: 6%;">1year </span></th>
+                            <th class="tableHead" colspan="2"><span style="padding: 6%;">3years</span></th>
                         </tr>
                     </thead>
                 </table>
@@ -69,16 +69,16 @@
             <table class="table table-borderless" id="tableborder">
                 <tr>
                     <thead>
-                        <th id="tableHead">Ranch</th>
-                        <th id="tableHead">Commodity</th>
-                        <th id="tableHead">Harvest Date</th>
-                        <th id="tableHead">Target Yield</th>
-                        <th id="tableHead">Actual Yield</th>
-                        <th id="tableHead"> </th>
+                        <th class="tableHead">Ranch</th>
+                        <th class="tableHead">Commodity</th>
+                        <th class="tableHead">Harvest Date</th>
+                        <th class="tableHead">Target Yield</th>
+                        <th class="tableHead">Actual Yield</th>
+                        <th class="tableHead"> </th>
                     </thead>
                 </tr>
                 <tbody>
-                    <td colspan="6 " id="heading" >Organic 13
+                    <td colspan="6 " class="heading" >Organic 13
                         <hr>
                     </td>
                     <tr ng-repeat="data in myData.Report ">
@@ -91,7 +91,7 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <td colspan="6 " id="heading">Organic 15
+                    <td colspan="6 " class="heading">Organic 15
                         <hr>
                     </td>
                     <tr ng-repeat="data in myData.Report " ng-if="$index <2 ">
@@ -104,7 +104,7 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <td colspan="6 " id="heading">Organic 16
+                    <td colspan="6 " class="heading">Organic 16
                         <hr>
                     </td>
                     <tr ng-repeat="data in myData.Report " ng-if="$index <2 ">
@@ -117,7 +117,7 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <td colspan="6 " id="heading">Organic 17
+                    <td colspan="6 " class="heading">Organic 17
                         <hr>
                     </td>
                     <tr ng-repeat="data in myData.Report " ng-if="$index <3 ">
