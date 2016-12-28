@@ -199,6 +199,7 @@ h5 {
 
 #td3 {
     border-bottom: 4px solid #7cb342;
+
 }
 
 #navCopy {
@@ -211,24 +212,46 @@ h5 {
 }
 
 #result-Table {
-
     height: 400px;
     border: 2px solid grey;
     margin-top: 50px;
 }
+
 @font-face {
     font-family: FiraSans-Light;
     src: url("../fonts/FiraSans-Light.ttf") format('truetype');
-    color:black;
+    color: black;
 }
-*{
+
+* {
     font-family: FiraSans-Light;
 }
 
-.icon{
-  text-align: center;
-  height: 40px;
-  width: 40px;
-  font-size: 30px!important;
-  padding-top: 5px;
+.icon {
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    font-size: 30px!important;
+    padding-top: 5px;
+}
+
+.table-borderless tbody tr td,
+.table-borderless thead tr td,
+.table-borderless tfoot tr td {
+    border: none;
+}
+hr{
+   border: 1px solid grey;
+    color: grey;
+}
+#tableHead{
+        font-size: 12px!important;
+}
+#heading{
+    height: 20px;
+     text-align: left;
+     font-weight: bold;
+}
+#tableborder{
+        border: 1px solid grey!important;
 }

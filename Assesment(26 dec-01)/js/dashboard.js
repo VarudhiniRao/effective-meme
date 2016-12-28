@@ -37,6 +37,7 @@ app.controller('graphDataCtrl', function($scope, ajaxCallService) {
             for (var i = 0; i < $scope.myData.length; i++) {
                 $scope.myData[i].type = "stackedBar";
                 $scope.myData[i].showInLegend = true;
+                  $scope.myData[i].axisYType= "secondary";
             };
             console.log($scope.myData)
             chartFunction($scope.myData);
@@ -107,6 +108,7 @@ app.controller('forecastDataCtrl', function($scope, ajaxCallService) {
             for (var i = 0; i < $scope.myData2.length; i++) {
                 $scope.myData2[i].type = "column";
                 $scope.myData2[i].showInLegend = true;
+                 
             };
             console.log($scope.myData2)
             graphFunction($scope.myData2);
