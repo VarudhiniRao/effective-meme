@@ -40,14 +40,14 @@ app.controller('graphDataCtrl', function($scope, ajaxCallService) {
             for (var i = 0; i < $scope.myData.length; i++) {
                 $scope.myData[i].type = "stackedBar";
                 $scope.myData[i].showInLegend = true;
-                  $scope.myData[i].axisYType= "secondary";
+                $scope.myData[i].axisYType = "secondary";
             };
             console.log($scope.myData)
             chartFunction($scope.myData);
 
         });
     };
-// a function to make charts responsive according to the data,
+    // a function to make charts responsive according to the data,
     function chartFunction(myData) {
         var chart = new CanvasJS.Chart("chartContainer", {
             title: {
@@ -78,7 +78,7 @@ app.service('ajaxCallService', function($http) {
         });
     }
 
-     this.getData2 = function(callbackFunc) {
+    this.getData2 = function(callbackFunc) {
 
         $http.get("js/document2.json").success(function(data) {
             console.log(data)
@@ -111,7 +111,7 @@ app.controller('forecastDataCtrl', function($scope, ajaxCallService) {
             for (var i = 0; i < $scope.myData2.length; i++) {
                 $scope.myData2[i].type = "column";
                 $scope.myData2[i].showInLegend = true;
-                 
+
             };
             console.log($scope.myData2)
             graphFunction($scope.myData2);
@@ -122,17 +122,17 @@ app.controller('forecastDataCtrl', function($scope, ajaxCallService) {
     function graphFunction(myData2) {
         var chart = new CanvasJS.Chart("chartContainer2", {
             theme: "theme3",
-                        animationEnabled: true,
-            
+            animationEnabled: true,
+
             toolTip: {
                 shared: true
-            },          
+            },
             axisY: {
                 title: "Total Yield",
 
-            } ,    
-            
-            
+            },
+
+
             data: myData2
 
         });
@@ -149,12 +149,12 @@ app.controller('waterRecordCtrl', function($scope, ajaxCallService) {
         $scope.myData = null;
         ajaxCallService.getWaterResult(function(dataResponse) {
             $scope.myData = dataResponse;
-            
+
             console.log($scope.myData)
-           
+
 
         });
     };
- $scope.clickMe();
+    $scope.clickMe();
 
 });
