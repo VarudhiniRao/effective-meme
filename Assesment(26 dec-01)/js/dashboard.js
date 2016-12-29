@@ -1,5 +1,5 @@
 var app = angular.module('farmerDashboard', []);
-
+// directive for navbar 
 app.directive('navbarDirective', function() {
     return {
         restrict: 'EA',
@@ -8,6 +8,7 @@ app.directive('navbarDirective', function() {
 
     };
 });
+// directive for commmodities and forecast navbars cum tables
 app.directive('graphNavDirective', function() {
     return {
         restrict: 'EA',
@@ -17,6 +18,7 @@ app.directive('graphNavDirective', function() {
     };
 
 });
+// directives for waterRecord and forecast Tables
 app.directive('waterRecordDirective', function() {
     return {
         restrict: 'EA',
@@ -29,6 +31,7 @@ app.directive('waterRecordDirective', function() {
 app.controller('navctrl', function($scope) {
 
 });
+// controller to get graph bar details from services
 app.controller('graphDataCtrl', function($scope, ajaxCallService) {
     $scope.clickMe = function() {
         $scope.myData = null;
@@ -44,7 +47,7 @@ app.controller('graphDataCtrl', function($scope, ajaxCallService) {
 
         });
     };
-
+// a function to make charts responsive according to the data,
     function chartFunction(myData) {
         var chart = new CanvasJS.Chart("chartContainer", {
             title: {
@@ -61,7 +64,7 @@ app.controller('graphDataCtrl', function($scope, ajaxCallService) {
 
 });
 
-
+// http calls to get the JSON object for graph details
 app.service('ajaxCallService', function($http) {
     this.getData = function(callbackFunc) {
 
@@ -99,7 +102,7 @@ app.service('ajaxCallService', function($http) {
     }
 });
 
-
+// another controller to set forecast details from service
 app.controller('forecastDataCtrl', function($scope, ajaxCallService) {
     $scope.clickMe = function() {
         $scope.myData2 = null;
@@ -140,6 +143,7 @@ app.controller('forecastDataCtrl', function($scope, ajaxCallService) {
 
 });
 
+// a controller to get data from the service for tables(water and forecast)
 app.controller('waterRecordCtrl', function($scope, ajaxCallService) {
     $scope.clickMe = function() {
         $scope.myData = null;

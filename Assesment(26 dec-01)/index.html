@@ -13,6 +13,7 @@
 </head>
 
 <body ng-app="farmerDashboard">
+    <!-- logo and serach bar starts here -->
     <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12" style="padding-top:20px">
             <img class="pull-left" src="image/pic.png" style="width:103px;height:75px;">
@@ -34,22 +35,26 @@
             </div>
         </div>
     </div>
+    <!-- main navbar with colapse sign and a heading -->
     <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12" style="margin-top:20px; background:#cecece">
             <i id="tab" class="fa fa-align-justify pull-left" title="Align Justify"></i>
             <h4 class="pull-left" style="padding-top:10px; font-weight:bold">Farmer Dashboard</h4>
             <div class="col-md-8 pull-right" style="padding-top:10px">
                 <i class="glyphicon glyphicon-th-large pull-right icon" air-hidden="true" style="color: #40c4ff"></i>
-                <i class="glyphicon glyphicon-map-marker pull-right icon" aria-hidden="true" style="; border-radius:50%"></i>
+                <i class="glyphicon glyphicon-map-marker pull-right icon" aria-hidden="true" style="background-color:grey; border-radius:50%"></i>
             </div>
         </div>
     </div>
+    <!-- directive for 3 small navbar/dropdowns -->
     <div ng-controller="navctrl">
         <navbar-directive></navbar-directive>
         <div>
+            <!--       directive for comodities and forecast nav -->
             <graph-nav-directive></graph-nav-directive>
         </div>
     </div>
+    <!--  for graphs of commmodities -->
     <div class="col-md-12 col-xs-12" style="margin-top:35px">
         <div class="col-md-6 ">
             <div ng-controller="graphDataCtrl">
@@ -57,6 +62,7 @@
                 </div>
             </div>
         </div>
+        <!-- forecastData graphs -->
         <div class="col-md-6 ">
             <div ng-controller="forecastDataCtrl">
                 <div id="chartContainer2" style="height: 300px; width: 70%;">
@@ -64,6 +70,7 @@
             </div>
         </div>
     </div>
+    <!-- water record tabular forms starts here -->
     <div ng-controller="waterRecordCtrl">
         <div>
             <water-record-directive></water-record-directive>
