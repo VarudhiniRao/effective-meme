@@ -12,14 +12,14 @@
     <script type="text/javascript" src="css/canvasjs.min.js"></script>
 </head>
 
-<body ng-app="farmerDashboard">
-    <!-- logo and serach bar starts here -->
+<body ng-app="farmerDashboard" ng-controller="sideNavCtrl">
+    <!-- logo and search bar starts here -->
     <div>
         <div class="col-xs-12 col-md-12 col-lg-12" style="padding-top:20px">
             <img class="pull-left" src="image/pic.png" style="width:103px;height:75px;">
             <div class="col-md-8 pull-right" style="padding-top:20px">
-                <i class="fa fa-ellipsis-v fa-lg pull-right icon" air-hidden="true" style="padding-top:10px"></i>
-                <i class="fa fa-user pull-right icon" aria-hidden="true" style="background-color:grey; border-radius:50%"></i>
+                <i class="fa fa-ellipsis-v fa-lg pull-right icon" aria-hidden="true" style="padding-top:10px"></i>
+                <i class="fa fa-user pull-right icon iconUser" aria-hidden="true" ></i>
                 <div class="pull-right col-md-5">
                     <div class="col-xs-12">
                         <div class="input-group stylish-input-group">
@@ -36,13 +36,33 @@
         </div>
     </div>
     <!-- main navbar with colapse sign and a heading -->
-    <div >
-        <div class="col-xs-12 col-md-12 col-lg-12" style="margin-top:20px; background:#cecece">
-            <i id="tab" class="fa fa-align-justify pull-left" title="Align Justify"></i>
-            <h4 class="pull-left" style="padding-top:10px; font-weight:bold">Farmer Dashboard</h4>
-            <div class="col-md-8 pull-right" style="padding-top:10px">
+    <div ng-controller="sideNavCtrl">
+        <div class="col-xs-12 col-md-12 col-lg-12 navBorder">
+            <div class="col-md-5" style="padding: 0px!important">
+                <button ng-click="openSideIcon()" class="showSideBar"><i id="tab" class="fa fa-align-justify pull-left" title="Align Justify"></i></button>
+                <span><h4>Farmer Dashboard</h4></span>
+            </div>
+            <div class="col-md-7 pull-right" style="padding-top:15px">
                 <i class="glyphicon glyphicon-th-large pull-right icon" air-hidden="true" style="color: #40c4ff"></i>
-                <i class="glyphicon glyphicon-map-marker pull-right icon" aria-hidden="true" style="background-color:grey; border-radius:50%"></i>
+                <i class="glyphicon glyphicon-map-marker pull-right icon" aria-hidden="true" style="border-radius:50%"></i>
+            </div>
+        </div>
+        <div ng-show="showSideNav" id="sideNav">
+            <div class="sideNav1">
+                <div class="sideNav2">
+                    <div>
+                        <span class="farmerTitle">Farmer Menu</span>
+                        <button class="showSideBar" ng-click="closeIcon()"><span class="closingIcon">
+                        <i class="fa fa-align-justify" title="Align Justify" aria-hidden="true"></i>
+                        </span></button>
+                    </div>
+                    <hr>
+                    <div><span class="navDetails">Farmer Dashboard</span></div>
+                    <div class="navDetails"><span>Production</span></div>
+                    <div class="navDetails"><span >Food Safety</span></div>
+                    <div class="navDetails"><span>Traceability</span></div>
+                    <div class="navDetails"><span>Recall/Incident Tracking</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -58,14 +78,14 @@
     <div class="col-md-12 col-xs-12" style="margin-top:35px">
         <div class="col-md-6 ">
             <div ng-controller="graphDataCtrl">
-                <div id="chartContainer" style="height: 220px; width: 100%;">
+                <div id="chartContainer" >
                 </div>
             </div>
         </div>
         <!-- forecastData graphs -->
         <div class="col-md-6 ">
             <div ng-controller="forecastDataCtrl">
-                <div id="chartContainer2" style="height: 300px; width: 70%;">
+                <div id="chartContainer2">
                 </div>
             </div>
         </div>

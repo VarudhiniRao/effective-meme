@@ -28,6 +28,19 @@ app.directive('waterRecordDirective', function() {
     };
 
 });
+app.controller('sideNavCtrl',function ($scope) {
+$scope.showSideNav = false;
+    $scope.openSideIcon = function(){
+     
+          $scope.showSideNav = true;
+          //console.log($scope.search);
+           console.log("hi")
+        } 
+        $scope.closeIcon = function(){
+          $scope.showSideNav = false;
+        }
+});
+   
 app.controller('navctrl', function($scope) {
 
 });

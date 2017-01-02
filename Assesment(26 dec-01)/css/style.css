@@ -88,7 +88,7 @@
     background-color: #7cb342;
     font-size: 30px;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 20px;
 }
 
 #nav {
@@ -98,11 +98,17 @@
     margin-top: 20px;
     margin-left: -190px;
 }
-
+.showSideBar{
+    background-color: transparent;
+     border: none;
+     padding:0px!important;
+}
 h4 {
     font-size: 20px;
     padding-top: 22px;
-    padding-left: 22px;
+    margin-left: 22px;
+     display: inline;
+      font-weight:bold;
 }
 
 #li1 {
@@ -261,4 +267,54 @@ hr{
 }
 #tableRytBorder{
     border-right: 1px solid grey!important;
+}
+#sideNav{
+    top:105px;
+    width:100%;
+    
+    z-index: 1;
+    position: absolute;
+    height:100%; 
+}
+.sideNav1{
+    height:1680px;
+    width: 100%;
+    background-color:rgba(74,74,74,0.5);
+}
+.sideNav2{
+    width:261px;height:100%;
+    background-color:#84b84a;
+}
+.farmerTitle{
+    color:white;
+    font-size:20px;
+}
+.closingIcon{
+    margin-left:50px;
+    font-size:24px;
+    color:white;
+}
+.navDetails{
+    margin-top:38px;
+    color:white;
+    font-size:20px;
+}
+.iconUser{
+    background-color:grey!important;
+     border-radius:50%!important;
+}
+#chartContainer
+{
+    height: 220px;
+     width: 100%;"
+}
+#chartContainer2
+{
+    height: 300px;
+     width: 70%;
+}
+.navBorder{
+    margin-top:20px; 
+    background:#cecece;
+    padding: 0px!important
 }
