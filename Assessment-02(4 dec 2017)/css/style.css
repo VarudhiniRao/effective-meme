@@ -1,0 +1,73 @@
+.table-background{
+	background-color: #eeeeee!important;
+}
+.table-background2{
+	background-color: #c8e6c9!important;
+}
+.table{
+	width:80%;
+	height:20%;
+}
+.main-div{
+	padding: 50px 20px 20px 180px;
+}
+td{
+	height: 50px;
+}
+th{
+	height: 50px;
+}
+button{
+		border-color: transparent;
+		background-color: transparent;
+}
+.modal-body{
+
+	width:900px;
+
+}
+h4{
+	font-weight: bold;
+	font-size: 30px;
+	font-family: sans-serif;
+}
+
+.asteric{
+
+font-size: 25px;
+color: red;
+
+}
+label{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.checkbox{
+	position: relative;
+	padding:20px;
+	margin-top: 120px;
+	font-size: 10px;
+	font-weight: bold;
+
+}
+.description{
+	height: 80px!important;
+}
+.fa-info-circle{
+	font-size: 30px!important;
+	color: blue;
+}
+.btn-default{
+	padding:15px 30px;
+	min-width: 200px;
+	width: 100%;
+	text-align: left;
+}
+.btn-new{
+	padding: 15px 90px 30px!important;
+}
+.input_type{
+	width: 200px;
+	height: 40px;
+}
