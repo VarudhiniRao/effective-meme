@@ -59,10 +59,14 @@ label{
 	color: blue;
 }
 .btn-default{
-	padding:15px 30px;
+	padding:6px 15px;
 	min-width: 200px;
 	width: 100%;
 	text-align: left;
+}
+.caret{
+	float: right;
+	margin-top: 8px;
 }
 .btn-new{
 	padding: 15px 90px 30px!important;
@@ -70,4 +74,9 @@ label{
 .input_type{
 	width: 200px;
 	height: 40px;
+}
+ul {
+height:160px;
+overflow-y: scroll;
+padding: 12px 12px 12px 12px;
 }

@@ -5,21 +5,33 @@ app.controller('addDetailsCtrl', function($scope, jsonService) {
     $scope.fnOpen = function() {
         $("#myModal").modal('show');
     }
+    $scope.moveNext = function() {
+        $('#myModal2').modal('show');
+    }
+    $scope.moveBack = function() {
+        $('#myModal2').modal('hide');
+        $("#myModal").modal('show');
+
+    }
+
 
     //getting all the json
     $scope.myData1 = {};
-    $scope.select = "Select123";
+    $scope.select = "Select";
+    $scope.select2 = "Select";
+    $scope.select3 = "Select";
+    $scope.select4 = "Select";
+    $scope.select5 = "Select";
+    $scope.select6 = "Select";
+    $scope.select7 = "Select";
+    $scope.select8 = "Select";
+
     jsonService.getc_FrequencyType(function(dataResponse) {
         $scope.myData1 = dataResponse;
         for (var i = 0; i < $scope.myData1.length; i++) {
             var myPath = $scope.myData1[i].path;
-            console.log(myPath);
             $scope.myPathValue1 = myPath.split("\\");
-
-            console.log($scope.myPathValue1);
-
         }
-        console.log($scope.myData1)
     });
 
     $scope.changeSelect = function(select) {
@@ -32,11 +44,54 @@ app.controller('addDetailsCtrl', function($scope, jsonService) {
         $scope.select3 = select3;
     };
     $scope.changeSelect4 = function(select4) {
-        $scope.selec4t = select4;
+        $scope.select4 = select4;
     };
     $scope.changeSelect5 = function(select5) {
         $scope.select5 = select5;
     };
+    $scope.changeSelect6 = function(select6) {
+        $scope.select6 = select6;
+    };
+    $scope.changeSelect7 = function(select7) {
+        $scope.select7 = select7;
+    };
+    $scope.changeSelect8 = function(select8) {
+        $scope.select8 = select8;
+    };
+    $scope.SaveMe = function() {
+
+        $scope.DetailedArray = [];
+
+        $scope.DetailedArray.push($scope.select);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select2);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select3);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select4);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select5);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select6);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select7);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.select8);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.textTyped_1);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.textTyped_2);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.textTyped_3);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.textTyped_5);
+        console.log($scope.DetailedArray);
+        $scope.DetailedArray.push($scope.textTyped_4);
+        console.log($scope.DetailedArray);
+
+    }
+
+
 
     $scope.myData2 = {};
     jsonService.getc_PaymentType(function(dataResponse) {
