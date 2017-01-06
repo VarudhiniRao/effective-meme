@@ -2,17 +2,30 @@ var app = angular.module('paymentInfoApp', []);
 
 app.controller('addDetailsCtrl', function($scope, jsonService) {
     // body
+    var deletedIndex = '';
     $scope.fnOpen = function() {
         $("#myModal").modal('show');
+
     }
+    $scope.DetailedArray = [];
+
     $scope.moveNext = function() {
-        $('#myModal2').modal('show');
-    }
+            $('#myModal2').modal('show');
+
+            $('#myModal2').modal('show');
+        }
+        // $scope.fnSubmit = function() {
+        //     alert("valid");
+        // }
+
+
+
     $scope.moveBack = function() {
         $('#myModal2').modal('hide');
         $("#myModal").modal('show');
 
     }
+
 
 
     //getting all the json
@@ -58,36 +71,95 @@ app.controller('addDetailsCtrl', function($scope, jsonService) {
     $scope.changeSelect8 = function(select8) {
         $scope.select8 = select8;
     };
+    $scope.DetailedArray = [];
     $scope.SaveMe = function() {
 
-        $scope.DetailedArray = [];
+        $scope.detailobj = {};
+        $scope.detailobj.paymentType = $scope.select
+        $scope.detailobj.accountType = $scope.select2
+        $scope.detailobj.Frequency = $scope.select3
+        $scope.detailobj.startDate = $scope.timeEntered
+        $scope.detailobj.paymentTime = $scope.select4
+        $scope.detailobj.paymentDueOn = $scope.select6
+        $scope.detailobj.AccountingCount = $scope.accountdetails;
+        $scope.detailobj.GrowthType = $scope.select8;
+        $scope.detailobj.FixedType = $scope.textTyped_5;
+        $scope.detailobj.NumberOfSchedules = $scope.textTyped_1;
+        $scope.detailobj.AdjustEveryMonth = $scope.textTyped_2;
+        $scope.detailobj.ChargeAmount = $scope.select7;
+        $scope.detailobj.ContractRent = $scope.textTyped_3;
+        $scope.detailobj.AmountBase = $scope.textTyped_4;
+        $scope.DetailedArray.push({ "paymentType": $scope.select, "dataObj": $scope.detailobj });
+        $('#myModal2').modal('hide');
 
-        $scope.DetailedArray.push($scope.select);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select2);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select3);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select4);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select5);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select6);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select7);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.select8);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.textTyped_1);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.textTyped_2);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.textTyped_3);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.textTyped_5);
-        console.log($scope.DetailedArray);
-        $scope.DetailedArray.push($scope.textTyped_4);
-        console.log($scope.DetailedArray);
+        $('#myModal').modal('hide');
+
+        $scope.edit = function(detailobj) {
+            $('#myModalForEdit').modal('show');
+        }
+        
+        $scope.select = "Select";
+        $scope.select2 = "Select";
+        $scope.select3= "Select";
+        $scope.timeEntered= "Select";
+        $scope.select4= "Select";
+        $scope.select6= "Select";
+        $scope.accountdetails= "Select";
+        $scope.accountdetails= "Select";
+
+
+
+        
+
+        $scope.sureForSave = function() {
+            // body...
+            $('#myModalForSureSave').modal('show');
+        }
+
+        $scope.saveData = function() {
+            $scope.DetailedArray = [];
+            $scope.detailobj = {};
+            $scope.detailobj.paymentType = $scope.select
+            $scope.detailobj.accountType = $scope.select2
+            $scope.detailobj.Frequency = $scope.select3
+            $scope.detailobj.startDate = $scope.timeEntered
+            $scope.detailobj.paymentTime = $scope.select4
+            $scope.detailobj.paymentDueOn = $scope.select6
+            $scope.detailobj.AccountingCount = $scope.accountdetails;
+            $scope.detailobj.GrowthType = $scope.select8;
+            $scope.detailobj.FixedType = $scope.textTyped_5;
+            $scope.detailobj.NumberOfSchedules = $scope.textTyped_1;
+            $scope.detailobj.AdjustEveryMonth = $scope.textTyped_2;
+            $scope.detailobj.ChargeAmount = $scope.select7;
+            $scope.detailobj.ContractRent = $scope.textTyped_3;
+            $scope.detailobj.AmountBase = $scope.textTyped_4;
+            $scope.DetailedArray.push({ "paymentType": $scope.select, "dataObj": $scope.detailobj });
+
+            $('#myModalForSureSave').modal('hide')
+            $('#myModalForEdit').modal('hide')
+
+
+
+        }
+
+        $scope.delete = function(index) {
+            deletedIndex = index;
+            $('#myModalForSureDelete').modal('show');
+
+
+        }
+        $scope.deleteOkay = function(index) {
+            console.log(index);
+
+            $scope.DetailedArray[deletedIndex].dataObj = {}
+                //  $scope.DetailedArray.Frequency="";
+                //  $scope.DetailedArray.startDate="";
+                // $scope.DetailedArray.paymentType="";
+                // $scope.DetailedArray.AmountBase="";
+                // body...
+
+        }
+
 
     }
 
@@ -227,11 +299,11 @@ app.service('jsonService', function($http) {
 
 });
 
-app.controller("growthCtrl", function($scope) {
+// app.controller("growthCtrl", function($scope) {
 
-    // body...
-    $scope.moveNext = function() {
-        $('')
+//     // body...
+//     $scope.moveNext = function() {
+//         $('')
 
-    }
-})
+//     }
+// })

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/paymentInfo.js"></script>
+    <link rel="icon" href="fa fa-angle-down" sizes="16x16">
     <!--  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
@@ -27,31 +28,32 @@
                         <h4 class="modal-title">Payment Information</h4>
                     </div>
                     <div class="modal-body clearfix">
-                        <div class="col-md-6">
-                            <label for="sel1 ">Payment Type
-                                <sup-script class="asteric ">*</sup-script>
-                            </label>
-                            <!-- <input type="text" ng-model="textTyped"> -->
-                            <div class="dropdown open">
-                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select}} <span class="caret"></span> </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <input type="text" ng-model="textTyped">
-                                    </li>
-                                    <li ng-repeat="value in myPathValue2|filter:textTyped" ng-click="changeSelect(value)">
-                                        {{value}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6 ">
-                            <div class="form-group ">
-                                <label for="sel1 ">Account Type
+                        <form name="myForm" ng-class="{'error':isChecked}">
+                            <div class="col-md-6">
+                                <label for="sel1 ">Payment Type
                                     <sup-script class="asteric ">*</sup-script>
                                 </label>
-                                <div class="dropdown ">
-                                    <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{
-                                    select2}} <span class="caret"></span> </a>
+                                <!-- <input type="text" ng-model="textTyped"> -->
+                                <div class="dropdown open">
+                                    <div class="btn btn-default dropdown-toggle text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select}} <span class="caret"><span style="color:red" ng-show="isChecked "></div>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <input type="text" name="payment" ng-model="textTyped" required>
+                                        </li>
+                                        <li ng-repeat="value in myPathValue2|filter:textTyped" ng-click="changeSelect(value)">
+                                            {{value}}
+                                        </li>
+                                    </ul>
+                                    <h5 ng-if=myForm.payment.$invalid></h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="form-group ">
+                                    <label for="sel1 ">Accounting Type
+                                        <sup-script class="asteric ">*</sup-script>
+                                    </label>
+                                    <div class="dropdown ">
+                                        <div class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ng-model="abc" required> {{ select2}} <span class="caret"></span> </div>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <input type="text" ng-model="textTyped2">
@@ -62,282 +64,492 @@
                                     </ul>
                                 </div>
                             </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Frequency
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select3}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu" style="width: 80px;">
+                                <li>
+                                    <input type="text" ng-model="textTyped3">
+                                </li>
+                                <li ng-repeat="value in myPathValue1|filter:textTyped3" ng-click="changeSelect3(value)">
+                                    {{value}}
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-4 ">
-                            <label for="sel1 ">Frequency
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Period Start Date
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <input type="date" class="form-control" name="bday" ng-model="timeEntered">
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Payment Timing
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select4}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped4">
+                                </li>
+                                <li ng-repeat="value in myData8.result|filter:textTyped4" ng-click="changeSelect4(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Payment Due On
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select5}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped5">
+                                </li>
+                                <li ng-repeat="value in myData7.result|filter:textTyped5" ng-click="changeSelect5(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Payment Due Day
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select6}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped6">
+                                </li>
+                                <li ng-repeat="value in myData6.result|filter:textTyped6" ng-click="changeSelect6(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Accounting Count Center
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <label for="usr "></label>
+                        <input type="text " class="form-control " id="usr " ng-model="accountdetails">
+                    </div>
+                    <div class="col-md-12">
+                        <label>
+                            &nbsp
+                            <br>
+                            <input type="checkbox"> Option Term Payment &nbsp
+                            <br> &nbsp
+                            <br>
+                        </label>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="usr">Description</label>
+                        <input type="text " class="form-control description " id="usr ">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer ">
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <button type="button " data-dismiss="modal "><i style="font-size: 30px;" class="fa fa-angle-right " aria-hidden="true " ng-click="moveNext();isChecked=true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Payment Parameters</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="col-md-6">
+                        <label for="sel1 ">Growth Type
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <!-- <input type="text" ng-model="textTyped"> -->
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{
+                                    select8}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped8">
+                                </li>
+                                <li ng-repeat="value in myData5.result|filter:textTyped8" ng-click="changeSelect8(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="form-group ">
+                            <label for="sel1 ">Fixed Growth
                                 <sup-script class="asteric ">*</sup-script>
                             </label>
-                            <div class="dropdown ">
-                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select3}} <span class="caret"></span> </a>
-                                <ul class="dropdown-menu" style="width: 80px;">
-                                    <li>
-                                        <input type="text" ng-model="textTyped3">
-                                    </li>
-                                    <li ng-repeat="value in myPathValue1|filter:textTyped3" ng-click="changeSelect3(value)">
-                                        {{value}}
-                                    </li>
-                                </ul>
+                            <div>
+                                <input type="text" ng-model="textTyped_5" placeholder="0" style="height: 35px; width: 400px;">
                             </div>
                         </div>
-                        <div class="col-md-4 ">
-                            <label for="sel1 ">Period Start Date
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="col-md-6">
+                            <label for="sel1 ">Number Of Schedule
                                 <sup-script class="asteric ">*</sup-script>
                             </label>
-                            <input type="date" class="form-control" name="bday">
+                            <!-- <input type="text" ng-model="textTyped"> -->
+                            <div>
+                                <input type="text" ng-model="textTyped_1" placeholder="0" style="height: 35px; width: 400px;">
+                            </div>
                         </div>
+                        <div class="col-md-6">
+                            <label for="sel1 ">Adjust Every(X) Month
+                                <sup-script class="asteric ">*</sup-script>
+                            </label>
+                            <!-- <input type="text" ng-model="textTyped"> -->
+                            <div>
+                                <input type="text" ng-model="textTyped_2" placeholder="0" style="height: 35px; width: 400px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-4 ">
-                            <label for="sel1 ">Payment Timing
+                            <label for="sel1 ">Charge Amount Basis
                                 <sup-script class="asteric ">*</sup-script>
                             </label>
                             <div class="dropdown ">
-                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select4}} <span class="caret"></span> </a>
+                                <div class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select7}} <span class="caret"></span> </div>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <input type="text" ng-model="textTyped4">
+                                        <input type="text" ng-model="textTyped7">
                                     </li>
-                                    <li ng-repeat="value in myData8.result|filter:textTyped4" ng-click="changeSelect4(value.value)">
+                                    <li ng-repeat="value in myData4 .result|filter:textTyped7" ng-click="changeSelect7(value.value)">
                                         {{value.value}}
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4 ">
-                            <label for="sel1 ">Payment Due On
-                                <sup-script class="asteric ">*</sup-script>
-                            </label>
-                            <div class="dropdown ">
-                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select5}} <span class="caret"></span> </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <input type="text" ng-model="textTyped5">
-                                    </li>
-                                    <li ng-repeat="value in myData7.result|filter:textTyped5" ng-click="changeSelect5(value.value)">
-                                        {{value.value}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 ">
-                            <label for="sel1 ">Payment Due Day
-                                <sup-script class="asteric ">*</sup-script>
-                            </label>
-                            <div class="dropdown ">
-                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select6}} <span class="caret"></span> </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <input type="text" ng-model="textTyped6">
-                                    </li>
-                                    <li ng-repeat="value in myData6.result|filter:textTyped6" ng-click="changeSelect6(value.value)">
-                                        {{value.value}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 ">
+                        <div class="col-md-3">
                             <label for="sel1 ">Accounting Count Center
                                 <sup-script class="asteric ">*</sup-script>
                             </label>
                             <label for="usr "></label>
-                            <input type="text " class="form-control " id="usr ">
+                            <input type="text " class="form-control " ng-model="textTyped_3" id="usr" placeholder="0" style="width: 90px;"><span>Square-feet</span>
                         </div>
-                        <div class="col-md-12">
-                            <label>
-                                &nbsp
-                                <br>
-                                <input type="checkbox"> Option Term Payment &nbsp
-                                <br> &nbsp
-                                <br>
+                        <div class="col-md-4 ">
+                            <label for="sel1 ">Amount Per Basis
+                                <sup-script class="asteric ">*</sup-script>
                             </label>
-                        </div>
-                        <div class="col-md-12">
-                            <label for="usr">Description</label>
-                            <input type="text " class="form-control description " id="usr ">
+                            <div>
+                                <input type="text" ng-model="textTyped_4" placeholder="0" style="height: 35px; width: 280px;">
+                            </div>
                         </div>
                     </div>
-                    <div class="modal-footer ">
-                        <div class="col-md-2 text-center">
-                            <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
-                            <br>
-                            <p>Information</p>
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
-                            <br>
-                            <p>Information</p>
-                        </div>
-                        <button type="button " data-dismiss="modal "><i style="font-size: 30px;" class="fa fa-angle-right " aria-hidden="true " ng-click="moveNext()"></i></button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="modal-footer ">
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
                     </div>
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <button type="button " data-dismiss="modal "><i style="font-size: 30px;" class="fa fa-angle-left " aria-hidden="true " ng-click="moveBack()"></i></button>
+                    <button type="button " data-dismiss="modal " ng-click="SaveMe()">Save</button>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="myModal2" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Payment Parameters</h4>
+    </div>
+    <div class="main-div ">
+        <table class="table table-hover ">
+            <thead class="table-background ">
+                <tr>
+                    <th> </th>
+                    <th>Frequency Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Total Cash With Tax</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in DetailedArray" track by $index>
+                    <td>{{data.paymentType}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button data-toggle="collapse" data-target="#demo1" class="accordion-toggle"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                    </td>
+                </tr>
+                <tr style="border-top: none;">
+                    <td colspan="6" class="hiddenRow">
+                        <div id="demo1" class="accordian-body collapse">
+                            <table class="table">
+                                <tbody>
+                                    <tr ng-repeat="data in DetailedArray" ng-if="data.dataObj.Frequency" id="demo" class="hiddenRow track by index">
+                                        <td><i class="fa fa-hourglass" aria-hidden="true"></i></td>
+                                        <td>{{data.dataObj.Frequency}}</td>
+                                        <td>{{data.dataObj.startDate}}</td>
+                                        <td>{{data.dataObj.paymentType}}</td>
+                                        <td>{{data.dataObj.AmountBase}}</td>
+                                        <td>
+                                            <button><i class="fa fa-pencil" aria-hidden="true" ng-click="edit()"></i></button>
+                                            <button><i class="fa fa-times" aria-hidden="true" ng-click="delete($index)"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row "></th>
+                    <td colspan="2 "></td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <thead class="table-background2 ">
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th>
+                        <button ng-click="fnOpen() "><i class="fa fa-plus " aria-hidden="true "></i> ADD </button>
+                    </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="modal fade" id="myModalForEdit" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Payment Information</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="col-md-6">
+                        <label for="sel1 ">Payment Type
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <!-- <input type="text" ng-model="textTyped"> -->
+                        <div class="dropdown open">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped">
+                                </li>
+                                <li ng-repeat="value in myPathValue2|filter:'textTyped'" ng-click="changeSelect(value)">
+                                    {{value}}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="modal-body clearfix">
-                        <div class="col-md-6">
-                            <label for="sel1 ">Growth Type
+                    <div class="col-md-6 ">
+                        <div class="form-group ">
+                            <label for="sel1 ">Account Type
                                 <sup-script class="asteric ">*</sup-script>
                             </label>
-                            <!-- <input type="text" ng-model="textTyped"> -->
                             <div class="dropdown ">
-                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{
-                                    select8}} <span class="caret"></span> </a>
+                                <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select2}} <span class="caret"></span> </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <input type="text" ng-model="textTyped8">
+                                        <input type="text" ng-model="textTyped2">
                                     </li>
-                                    <li ng-repeat="value in myData5.result|filter:textTyped8" ng-click="changeSelect8(value.value)">
+                                    <li ng-repeat="value in myData3.result|filter:textTyped2" ng-click="changeSelect2(value.value)">
                                         {{value.value}}
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6 ">
-                            <div class="form-group ">
-                                <label for="sel1 ">Fixed Growth
-                                    <sup-script class="asteric ">*</sup-script>
-                                </label>
-                                <div>
-                                    <input type="text" ng-model="textTyped_5" placeholder="0" style="height: 35px; width: 400px;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 ">
-                            <div class="col-md-6">
-                                <label for="sel1 ">Number Of Schedule
-                                    <sup-script class="asteric ">*</sup-script>
-                                </label>
-                                <!-- <input type="text" ng-model="textTyped"> -->
-                                <div>
-                                    <input type="text" ng-model="textTyped_1" placeholder="0" style="height: 35px; width: 400px;">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="sel1 ">Adjust Every(X) Month
-                                    <sup-script class="asteric ">*</sup-script>
-                                </label>
-                                <!-- <input type="text" ng-model="textTyped"> -->
-                                <div>
-                                    <input type="text" ng-model="textTyped_2" placeholder="0" style="height: 35px; width: 400px;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 ">
-                                <label for="sel1 ">Charge Amount Basis
-                                    <sup-script class="asteric ">*</sup-script>
-                                </label>
-                                <div class="dropdown ">
-                                    <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select7}} <span class="caret"></span> </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <input type="text" ng-model="textTyped7">
-                                        </li>
-                                        <li ng-repeat="value in myData4 .result|filter:textTyped7" ng-click="changeSelect7(value.value)">
-                                            {{value.value}}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="sel1 ">Accounting Count Center
-                                    <sup-script class="asteric ">*</sup-script>
-                                </label>
-                                <label for="usr "></label>
-                                <input type="text " class="form-control " ng-model="textTyped_3" id="usr" placeholder="0" style="width: 90px;"><span>Square-feet</span>
-                            </div>
-                            <div class="col-md-4 ">
-                                <label for="sel1 ">Amount Per Basis
-                                    <sup-script class="asteric ">*</sup-script>
-                                </label>
-                                <div>
-                                    <input type="text" ng-model="textTyped_4" placeholder="0" style="height: 35px; width: 280px;">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
                     </div>
-                    <div class="modal-footer ">
-                        <div class="col-md-2 text-center">
-                            <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
-                            <br>
-                            <p>Information</p>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Frequency
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select3}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu" style="width: 80px;">
+                                <li>
+                                    <input type="text" ng-model="textTyped3">
+                                </li>
+                                <li ng-repeat="value in myPathValue1|filter:textTyped3" ng-click="changeSelect3(value)">
+                                    {{value}}
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-2 text-center">
-                            <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
-                            <br>
-                            <p>Information</p>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Period Start Date
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <input type="date" class="form-control" name="bday" ng-model="timeEntered">
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Payment Timing
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select4}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped4">
+                                </li>
+                                <li ng-repeat="value in myData8.result|filter:textTyped4" ng-click="changeSelect4(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
                         </div>
-                        <button type="button " data-dismiss="modal "><i style="font-size: 30px;" class="fa fa-angle-left " aria-hidden="true " ng-click="moveBack()"></i></button>
-                        <button type="button " data-dismiss="modal " ng-click="SaveMe()">Save</button>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Payment Due On
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select5}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped5">
+                                </li>
+                                <li ng-repeat="value in myData7.result|filter:textTyped5" ng-click="changeSelect5(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Payment Due Day
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{select6}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="textTyped6">
+                                </li>
+                                <li ng-repeat="value in myData6.result|filter:textTyped6" ng-click="changeSelect6(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="sel1 ">Accounting Count Center
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <label for="usr "></label>
+                        <input type="text " class="form-control " id="usr " ng-model="accountdetails">
+                    </div>
+                    <div class="col-md-12">
+                        <label>
+                            &nbsp
+                            <br>
+                            <input type="checkbox"> Option Term Payment &nbsp
+                            <br> &nbsp
+                            <br>
+                        </label>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="usr">Description</label>
+                        <input type="text " class="form-control description " id="usr ">
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <button type="button " data-dismiss="modal "><i style="font-size: 30px;" ng-click="sureForSave()">Save</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- for save for sure modal pop -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalForSureSave" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alert!!</h4>
+                    </div>
+                    <div>
+                        <h3>Are You Sure You want To Save The Data</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                        <span><button ng-click="saveData()" type="button" class="btn btn-primary"  class="btn btn-default" data-dismiss="modal">SAVE</button></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="main-div " >
-            <table class="table table-hover ">
-                <thead class="table-background ">
-                    <tr>
-                        <th> </th>
-                        <th>Frequency Type</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Total Cash With Tax</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="data in DetailedArray">
-                        <th scope="row "></th>
-                        <td>{{data}}</td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row "></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row "></th>
-                        <td colspan="2 "></td>
-                        <td></td>
-                        <td>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-                <thead class="table-background2 ">
-                    <tr>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
-                        <th>
-                            <button ng-click="fnOpen() "><i class="fa fa-plus " aria-hidden="true "></i> ADD </button>
-                        </th>
-                        <th> </th>
-                        <th> </th>
-                    </tr>
-                </thead>
-            </table>
+    </div>
+    <!-- for delete modal pop up -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalForSureDelete" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alert!!</h4>
+                    </div>
+                    <div>
+                        <h3>Are You Sure You want To Delete The Data</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                        <span><button ng-click="deleteOkay($index)" type="button" class="btn btn-primary"  class="btn btn-default" data-dismiss="modal">OKAY</button></span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    </div>
 </body>
 
 </html>
